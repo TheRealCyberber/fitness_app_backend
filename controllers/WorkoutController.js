@@ -29,7 +29,7 @@ const UpdateWorkout = async (req, res) => {
 
 const DeleteWorkout = async (req, res) => {
   try {
-    await Workout.deleteOne({ _id: req.params.post_id })
+    await Workout.deleteOne({ _id: req.params.workout_id })
     res.send({ msg: 'Workout Deleted', payload: req.params.workout_id, status: 'Ok' })
   } catch (error) {
     throw error
