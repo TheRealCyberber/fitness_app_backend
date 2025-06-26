@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const progressController = require('../controllers/ProgressController.js')
+const progressController = require('../controllers/progressController.js')
 const middleware = require('../middleware')
 
 
