@@ -16,8 +16,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/auth', AuthRouter)
-app.use('/workout', WorkoutRouter)
-app.use('/progress', ProgressRouter)
+app.use('/workout', workoutRouter)
+app.use('/progress', progressRouter)
 
 app.get('/', (req, res) => {
   res.send(`Connected!`)
