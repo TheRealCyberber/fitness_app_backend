@@ -2,8 +2,8 @@ const express = require('express')
 const logger = require('morgan')
 
 const AuthRouter = require('./routes/AuthRouter')
-const ProgressRouter = require('./routes/progressRouter')
-const WorkoutRouter = require('./routes/workoutRouter')
+const progressRouter = require('./routes/progressRouter')
+const workoutRouter = require('./routes/workoutRouter')
 
 const PORT = process.env.PORT || 3000
 
@@ -16,8 +16,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/auth', AuthRouter)
-app.use('/workout', WorkoutRouter)
-app.use('/progress', ProgressRouter)
+app.use('/workout', workoutRouter)
+app.use('/progress', progressRouter)
 
 app.get('/', (req, res) => {
   res.send(`Connected!`)
