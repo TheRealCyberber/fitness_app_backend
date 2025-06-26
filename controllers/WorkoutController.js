@@ -1,4 +1,4 @@
-const { Workout } = require('../models')
+const Workout = require('../models/Workout')
 
 const GetWorkouts = async (req, res) => {
   try {

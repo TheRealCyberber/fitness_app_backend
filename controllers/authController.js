@@ -1,10 +1,11 @@
-const { User } = require('../models')
+const User = require('../models/User')
 const middleware = require('../middleware')
 
 const Register = async (req, res) => {
   const { email, password, name } = req.body
   try {
     let passwordDigest = await middleware.hashPassword(password)
+    console.log('User model is:', User)
     let existingUser = await User.findOne({ email })
     if (existingUser) {
       return res.status(400).send("A user with that email has already been registered!")

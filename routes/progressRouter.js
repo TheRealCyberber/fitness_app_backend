@@ -1,11 +1,21 @@
 const express = require('express')
 const router = express.Router()
+const progressController = require('../controllers/ProgressController.js')
+const middleware = require('../middleware')
 
-const progressController = require('../controllers/progressController.js')
 
-router.post('/', progressController.CreateProgress)
 router.get('/', progressController.GetProgress)
-router.put('/:id', progressController.UpdateProgress)
-router.delete('/:id', progressController.DeleteProgress)
+router.post('/', 
+    middleware.stripToken,
+    middleware.verifyToken, 
+    progressController.CreateProgress)
+router.put('/:id', 
+    middleware.stripToken,
+    middleware.verifyToken,
+    progressController.UpdateProgress)
+router.delete('/:id', 
+    middleware.stripToken,
+    middleware.verifyToken,
+    progressController.DeleteProgress)
 
 module.exports = router
