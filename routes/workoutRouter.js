@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const workoutController = require('../controllers/WorkoutController.js')
+const workoutController = require('../controllers/workoutController.js')
 const middleware = require('../middleware')
 
 
