@@ -2,8 +2,8 @@ const express = require('express')
 const logger = require('morgan')
 
 const AuthRouter = require('./routes/AuthRouter')
-const ProgressRouter = require('./routes/progressRouter')
-const WorkoutRouter = require('./routes/workoutRouter')
+const progressRouter = require('./routes/progressRouter')
+const workoutRouter = require('./routes/workoutRouter')
 
 const PORT = process.env.PORT || 3000
 
