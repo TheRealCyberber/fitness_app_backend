@@ -11,7 +11,8 @@ const GetProgress = async (req, res) => {
 
 const CreateProgress = async (req, res) => {
   try {
-    const progress = await Progress.create({ ...req.body })
+    const userId = req.user.id
+    const progress = await Progress.create({ ...req.body, userId })
     res.send(progress)
   } catch (error) {
     throw error

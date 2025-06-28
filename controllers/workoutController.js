@@ -11,7 +11,8 @@ const GetWorkouts = async (req, res) => {
 
 const CreateWorkout = async (req, res) => {
   try {
-    const workout = await Workout.create({ ...req.body })
+    const userId = req.user.id
+    const workout = await Workout.create({ ...req.body, userId })
     res.send(workout)
   } catch (error) {
     throw error
