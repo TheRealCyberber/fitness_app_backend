@@ -1,3 +1,5 @@
+
+
 const express = require('express')
 const logger = require('morgan')
 
@@ -11,9 +13,17 @@ const db = require('./db')
 
 const app = express()
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:5173', // imported cors to enable backend
+  credentials: true 
+}))
+
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
+app.use(cors());
 
 app.use('/auth', AuthRouter)
 app.use('/workout', workoutRouter)
