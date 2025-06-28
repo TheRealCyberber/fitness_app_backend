@@ -6,6 +6,7 @@ const User = require('../models/User')
 
 router.post('/login', controller.Login)
 router.post('/register', controller.Register)
+// added session
 router.get('/session', middleware.stripToken, middleware.verifyToken, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password')
