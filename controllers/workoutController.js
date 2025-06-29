@@ -23,7 +23,7 @@ const CreateWorkout = async (req, res) => {
 
 const UpdateWorkout = async (req, res) => {
   try {
-    const workout = await Workout.findByIdAndUpdate(req.params.workout_id, req.body, {new: true})
+    const workout = await Workout.findByIdAndUpdate(req.params.id, req.body, {new: true})
     res.send(workout)
   } catch (error) {
     throw error
