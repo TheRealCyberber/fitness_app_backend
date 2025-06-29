@@ -2,7 +2,7 @@ const Progress = require('../models/Progress')
 
 const GetProgress = async (req, res) => {
   try {
-    const progress = await Progress.find({})
+    const progress = await Progress.find({ userId: req.user.id })
     res.send(progress)
   } catch (error) {
     throw error

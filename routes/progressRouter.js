@@ -4,7 +4,10 @@ const progressController = require('../controllers/progressController.js')
 const middleware = require('../middleware')
 
 
-router.get('/', progressController.GetProgress)
+router.get('/', 
+    middleware.stripToken,
+    middleware.verifyToken, 
+    progressController.GetProgress)
 router.post('/', 
     middleware.stripToken,
     middleware.verifyToken, 
