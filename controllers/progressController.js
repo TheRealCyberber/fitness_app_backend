@@ -30,7 +30,7 @@ const UpdateProgress = async (req, res) => {
 
 const DeleteProgress = async (req, res) => {
   try {
-    await Progress.deleteOne({ _id: req.params.progress_id })
+    await Progress.deleteOne({ _id: req.params.id })
     res.send({ msg: 'Progress Deleted', payload: req.params.progress_id, status: 'Ok' })
   } catch (error) {
     throw error

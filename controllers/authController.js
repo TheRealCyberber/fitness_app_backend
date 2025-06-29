@@ -25,6 +25,9 @@ const Login = async (req, res) => {
     const { email, password } = req.body
     // Finds a user by a particular field (in this case, email)
     const user = await User.findOne({ email })
+    if (!user) {
+      return res.status(404).send({ msg: 'User not found. Check your email.' })
+    }
     // Checks if the password matches the stored digest
     let matched = await middleware.comparePassword(
       password,
@@ -37,6 +40,12 @@ const Login = async (req, res) => {
         email: user.email,
         name: user.name
       }
+
+     
+
+    if (!matched) {
+      return res.status(401).send({ msg: 'Invalid password.' })
+    }
       // Creates our JWT and packages it with our payload to send as a response
       let token = middleware.createToken(payload)
       return res.send({ user: payload, token })
