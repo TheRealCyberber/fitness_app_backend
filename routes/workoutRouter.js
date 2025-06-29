@@ -4,7 +4,10 @@ const workoutController = require('../controllers/workoutController.js')
 const middleware = require('../middleware')
 
 
-router.get('/', workoutController.GetWorkouts)
+router.get('/', 
+    middleware.stripToken,
+    middleware.verifyToken, 
+    workoutController.GetWorkouts)
 router.post('/', 
     middleware.stripToken,
     middleware.verifyToken,

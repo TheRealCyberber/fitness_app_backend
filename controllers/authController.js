@@ -34,22 +34,19 @@ const Login = async (req, res) => {
       user.passwordDigest
     )
     // If they match, constructs a payload object of values we want on the front end
-    if (matched) {
+    if (!matched) {
+      return res.status(401).send({ msg: 'Invalid password.' })
+    } 
       let payload = {
         id: user._id,
         email: user.email,
         name: user.name
       }
 
-     
-
-    if (!matched) {
-      return res.status(401).send({ msg: 'Invalid password.' })
-    }
       // Creates our JWT and packages it with our payload to send as a response
       let token = middleware.createToken(payload)
       return res.send({ user: payload, token })
-    }
+    
     res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
   } catch (error) {
     console.log(error)

@@ -2,7 +2,7 @@ const Workout = require('../models/Workout')
 
 const GetWorkouts = async (req, res) => {
   try {
-    const workouts = await Workout.find({})
+    const workouts = await Workout.find({ userId: req.user.id })
     res.send(workouts)
   } catch (error) {
     throw error
