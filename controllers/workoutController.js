@@ -23,7 +23,7 @@ const CreateWorkout = async (req, res) => {
 
 const UpdateWorkout = async (req, res) => {
   try {
-    const workout = await Workout.findByIdAndUpdate(req.params.workout_id, req.body, {new: true})
+    const workout = await Workout.findByIdAndUpdate(req.params.id, req.body, {new: true})
     res.send(workout)
   } catch (error) {
     throw error
@@ -32,7 +32,7 @@ const UpdateWorkout = async (req, res) => {
 
 const DeleteWorkout = async (req, res) => {
   try {
-    await Workout.deleteOne({ _id: req.params.workout_id })
+    await Workout.deleteOne({ _id: req.params.id })
     res.send({ msg: 'Workout Deleted', payload: req.params.workout_id, status: 'Ok' })
   } catch (error) {
     throw error

@@ -21,7 +21,7 @@ const CreateProgress = async (req, res) => {
 
 const UpdateProgress = async (req, res) => {
   try {
-    const progress = await Progress.findByIdAndUpdate(req.params.progress_id, req.body, {new: true})
+    const progress = await Progress.findByIdAndUpdate(req.params.id, req.body, {new: true})
     res.send(progress)
   } catch (error) {
     throw error
@@ -30,8 +30,8 @@ const UpdateProgress = async (req, res) => {
 
 const DeleteProgress = async (req, res) => {
   try {
-    await Progress.deleteOne({ _id: req.params.progress_id })
-    res.send({ msg: 'Progress Deleted', payload: req.params.progress_id, status: 'Ok' })
+    await Progress.deleteOne({ _id: req.params.id })
+    res.send({ msg: 'Progress Deleted', payload: req.params.id, status: 'Ok' })
   } catch (error) {
     throw error
   }
