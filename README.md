@@ -8,20 +8,25 @@ Track your workouts, log your weight changes, visualize progress, and stay motiv
 
 ## 🔗 Deployed Site
 
-🌐 Live App: [https://fitnessly-app.netlify.app](https://fitnessly-app.netlify.app)  
-🚀 Backend API: [https://fitnessly-api.onrender.com](https://fitnessly-api.onrender.com)
+- Live App: https://fitnessly-app.surge.sh
+- Backend API: https://fitnessly-app.onrender.com
 
 
 ---
 
-## 👤 Developed By
+## 👤 Developed By:
 
 **Shafi Albalushi**
-**Shahla Badawi**
 
 - Email: shafi.albalushi@gmail.com
-- GitHub: github.com/TheRealCyberber
-- LinkedIn: linkedin.com/in/shafi-albalushi
+- GitHub: www.github.com/TheRealCyberber
+- LinkedIn: www.linkedin.com/in/shafi-albalushi
+
+**Shahlaa Badawy**
+
+- Email: shahlaa.ah@gmail.com
+- GitHub: www.github.com/ShahlaaBee
+- LinkedIn: www.linkedin.com/in/shahlaa-badawy
 
 ---
 
@@ -45,7 +50,7 @@ Fitnessly is a fitness companion that allows users to:
 
 - React.js (Hooks + Router)
 - CSS Flexbox + Grid
-
+- Surge Deployment
 
 ### 🔧 Backend
 
@@ -61,32 +66,28 @@ Fitnessly is a fitness companion that allows users to:
 
 ---
 
-## 🚀 Getting Started
-
-### Deployed App  
-> [Fitnessly on Render](url)
-
 ### Planning Docs  
-- [**Component Hierarchy**](url)  
-- [**ERD**](url)
+- [**Component Hierarchy**](./public/images/component%20hierarchy.jpg)  
+- [**ERD**](./public/images/ERD.png)
 
 ## Screenshot
 
-![Screenshot 1](./images/  
-![Screenshot 2](./images/)
-![Screenshot 3](./images/)
-![Screenshot 4](./images/)
+![Screenshot 1](./public/images/screenshot1.png)
+![Screenshot 2](./public/images/screenshot2.png)
+![Screenshot 3](./public/images/screenshot3.png)
 
 ## Future Updates
 
-🤝 Social login with Google/Facebook
-🧠 AI-based workout suggestions (OpenAI API)
-🗓 Calendar view of workout history
-📸 Upload profile picture and progress images
+- 🤝 Login with social media credential, i.e. Google/Facebook
+- 🧠 AI-based workout suggestions (OpenAI API)
+- 🗓 Calendar view of workout history
+- 📸 Upload profile picture and progress images
+- 🧠 Automatic calculation of calories based on workout type
+- 🏃‍♂️ Add daily steps
 
 ## Credits
 
-GA Instructors:
+GA Instructors for their continous guidance and unwavering support:
 - Michael Lackey
 - Mahmoud Ebrahim
 - Noor Sharaf
