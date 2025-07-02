@@ -1,5 +1,3 @@
-
-
 const express = require('express')
 const logger = require('morgan')
 
@@ -15,8 +13,7 @@ const app = express()
 
 const cors = require('cors');
 app.use(cors({
-  origin: 'http://localhost:5173', // imported cors to enable backend
-  credentials: true 
+  origin: 'https://fitnessly-app.surge.sh' // imported cors to enable backend
 }))
 
 app.use(logger('dev'))
